@@ -1,7 +1,8 @@
 # Example Project - To Do List App
 For CodeLou Full-stack Javascript Class 2021
 
-### Demo: [Pending] (Optional)
+### Demo:
+https://eg-todo-app-code-lou-1-1-2021.herokuapp.com/
 ### User stories:
 
 - As an authenticated user, I can see my personal to-do list
