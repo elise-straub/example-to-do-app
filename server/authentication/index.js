@@ -8,7 +8,6 @@ const { v4: uuidv4 } = require('uuid');
 const GITHUB_CLIENT_ID = env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = env.GITHUB_CLIENT_SECRET;
 const HOST = env.HOST;
-const PORT = `:${env.PORT}`;
 const { POSTMAN } = require('../../config/constants');
 
 const authentication = {
@@ -28,7 +27,7 @@ const authentication = {
         passport.use(new GitHubStrategy({
             clientID: GITHUB_CLIENT_ID,
             clientSecret: GITHUB_CLIENT_SECRET,
-            callbackURL: `${HOST}${PORT}/auth/github/callback`
+            callbackURL: `${HOST}/auth/github/callback`
         },
         async (accessToken, refreshToken, profile, done) => {
             if (!profile.username) {
