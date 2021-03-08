@@ -33,7 +33,7 @@ const updateTask = asyncHandler(async (req, res) => {
         task: {
             uuid: task.uuid,
             content: task.content,
-            isComplete: !!(task.isComplete)
+            isComplete: task.isComplete ? 1 : 0
         }}
     });
 });
