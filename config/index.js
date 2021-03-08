@@ -1,7 +1,7 @@
 
 const { each } = require('lodash');
 let environmentVariables = {};
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     each(process.env, (value, key) => environmentVariables[key] = value);
 
 } else {
@@ -16,6 +16,5 @@ if(process.env.NODE_ENV === 'production') {
     }
 
 }
-
 
 module.exports = environmentVariables;
